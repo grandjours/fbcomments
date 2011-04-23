@@ -1,0 +1,7 @@
+base 	fbcomments
+author 	Greatedays
+email	greatedays@gmail.com
+date	2011-4-23
+name 	Facebook comments box plugin for Dokuwiki
+desc	Facebook comments system plugin for Dokuwiki
+url	http://www.dokuwiki.org/plugin:fbcomments
