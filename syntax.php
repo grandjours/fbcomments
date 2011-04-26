@@ -121,7 +121,7 @@ class syntax_plugin_fbcomments extends DokuWiki_Syntax_Plugin {
           return $fbconf['plugin']['fbcomments'][$name];
             else return $conf[$name];
       } 
-        return $this->data[$name];
+        return hsc($this->data[$name]);
    }
    
 }
