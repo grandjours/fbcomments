@@ -49,7 +49,7 @@ class syntax_plugin_fbcomments extends DokuWiki_Syntax_Plugin {
       $this->Lexer->addSpecialPattern('\{\{fbc>[^}]*\}\}',$mode,'plugin_fbcomments');      
    }
    
-   function handle($match, $state, $pos, &$handler){
+   function handle($match, $state, $pos, Doku_Handler $handler){
       if (isset($_REQUEST['comment'])) return false;
       
       $match= substr($match, 6, -2);
@@ -69,7 +69,7 @@ class syntax_plugin_fbcomments extends DokuWiki_Syntax_Plugin {
         return $data;
    }
    
-   function render($mode, &$renderer, $data){
+   function render($mode, Doku_Renderer $renderer, $data){
      if($mode == 'xhtml'){
        $renderer->doc .= $this->_commentsBox($data);
        
